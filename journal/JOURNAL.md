@@ -70,3 +70,27 @@ Rules for this account:
   - no undefined risk
   - carry any remaining value into Phase 2
 - **Decision:** proceed as-is. The order goes in at tonight's 10:45 pm SGT check-in.
+
+## 2026-11-17 — Check-in #1 (10:45 pm SGT / 9:46 am US Eastern)
+
+**Snapshot**
+- SPY 738.3 (16 Nov close 740.04).
+- 750C: bid 12.53, ask 12.60. 770C: bid 4.53, ask 4.59.
+- 750/770 spread: mid ≈ $8.01, natural $8.07. Cheaper than yesterday's $8.33.
+- Payout ratio at mid is about 2.5×, so 60 spreads still pay $120k for about $48.3k.
+- 31 trading days to expiry (expiry 31 Dec). Implied volatility: 750C 15.9%, 770C 13.9%.
+
+**Odds**
+- Unchanged in substance. SPY needs ≥ 770, +4.3% from here.
+- The risk-neutral probability implied by the spread price is about 40%. The simulation estimate is about 32–33%.
+
+**Execution**
+- Market OPEN. Placed BUY 60 × 750/770 spread, limit $8.05 (client id `phase1-spy-750-770-cs-20261117-r1`). **Rejected: HTTP 403 "request is forbidden" (40310000).**
+- Diagnostic: a 1-share SPY stock limit order at $500 was **also rejected with 403**.
+- The account config is normal: `suspend_trade: false`, `closing_transactions_only: false`, options level 3, $100k buying power.
+- **Conclusion:** the cause is not market hours, options approval or the account's state. The Alpaca connector's credentials can read but cannot place orders, so every write call is forbidden. **The user needs to fix this** by reconnecting the Alpaca paper connector, or re-issuing its API key, with trading permission.
+
+**Decision**
+- No position yet. The strategy is unchanged.
+- The daily check-in will retry each day. If entry is delayed, re-size so that payout ≈ $120k and total cost ≤ $50k.
+- If entry slips past about 1 Dec, re-run the odds: with less time, the same strike needs a bigger move per day.

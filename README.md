@@ -14,7 +14,7 @@ A trading log and research repo for one goal: grow a **$50,000 USD** base portfo
 - **Phase 1 trade:** SPY 31-Dec-2026 750/770 bull call spread, 60 spreads at about $8.33 net debit (≈ $49,980).
   - If SPY ≥ 770 at expiry, the position is worth $120,000.
   - Maximum loss is the debit paid.
-- **Execution:** the first order attempts on 16 Nov, while the market was closed, were rejected with HTTP 403. The retry happens at the first daily check-in: 17 Nov, 10:45 pm SGT. See the [journal](journal/JOURNAL.md).
+- **Execution:** ❌ **blocked.** Every Alpaca paper order (options and stock) is rejected with HTTP 403 "forbidden", even with the market open (17 Nov). The connector can read data but not trade. Waiting for the user to reconnect Alpaca with trading permission. See the [journal](journal/JOURNAL.md).
 - **Open positions:** none yet.
 
 ## Monitoring
