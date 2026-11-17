@@ -19,7 +19,7 @@ A trading log and research repo for one goal: grow a **$50,000 USD** base portfo
 
 ## Monitoring
 
-- **Phase 1 (until 31 Dec 2026):** an automated check-in every weekday at 1:13 pm US Eastern.
+- **Phase 1 (until 31 Dec 2026):** a planned check-in every weekday at 1:13 pm US Eastern. *Not yet active: setting up the recurring schedule was blocked by a permission check and needs the user's approval. Until then, check-ins run when the user asks.*
   - Reviews positions and prices, and re-runs the analysis.
   - Changes the strategy if needed, then journals and pushes.
 - **Phase 2:** the check-in moves to weekly or monthly, set when Phase 1 ends.

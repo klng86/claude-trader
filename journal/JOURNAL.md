@@ -50,4 +50,4 @@ Rules for this account:
 - **The user granted ongoing authority:** Claude may run any analysis needed and adjust the strategy as conditions change.
 - **Hard limit, repeated by the user:** **no trading in the live IBKR account.**
 - **Recorded in:** `CLAUDE.md` (standing instructions).
-- **Monitoring:** a weekday check-in at 1:13 pm US Eastern, through Phase 1. It runs mid-session so there is time to act before the 31 Dec close.
+- **Monitoring:** a weekday check-in at 1:13 pm US Eastern was planned, but creating the recurring schedule was **denied by a permission check**. It is pending the user's approval. The one-off order retry at 9:45 am US Eastern on 17 Nov is still scheduled.
