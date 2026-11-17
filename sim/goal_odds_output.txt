@@ -1,0 +1,20 @@
+Goal 1: $50,000 -> $120,000 in 31 trading days (+140%)
+strategy                              P(hit)     median  P(<$25k)
+1x SPY, daily rebalanced                0.0%     50,875      0.0%
+2x SPY, daily rebalanced                0.0%     51,323      0.0%
+3x SPY, daily rebalanced                0.0%     51,619      0.0%
+5x SPY, daily rebalanced                0.0%     51,759      1.5%
+All-in SPY 750/770 call spread         32.8%     17,397     51.3%
+50% spread, 50% cash                    0.0%     33,699      0.0%
+Upper bound for a fair bet (start/goal): 41.7%
+
+Goal 2: USD 2,751,789 (NZD 5M at 1.817) by 2031-12-31
+Needs 22.9x from $120k (CAGR 87%) or 55x from $50k (CAGR 123%)
+leverage  P(hit) from 120k  P(hit) from 50k  median from 120k  P(lose 90%)
+     1.0             0.00%            0.00%           213,727         0.0%
+     1.5             0.00%            0.00%           241,365         0.0%
+     2.0             0.02%            0.00%           262,791         0.0%
+     3.0             1.39%            0.10%           278,922         0.2%
+     4.0             4.41%            1.00%           255,024         1.8%
+
+Caveat: leverage odds here use 2021-26 SPY returns (~15%/yr). At a long-run ~9%/yr these odds shrink a lot.
