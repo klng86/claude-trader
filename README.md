@@ -9,13 +9,15 @@ A trading log and research repo for one goal: grow a **$50,000 USD** base portfo
 
 > ⚠️ **Paper trading only, on Alpaca.** No orders are placed, changed or cancelled on Interactive Brokers (IBKR) or any live-money account. The Alpaca paper account holds $100,000; the plan trades only a $50,000 sleeve of it.
 
-## Status (updated 17 Nov 2026)
+## Status (updated 17 Nov 2026, 10:48 pm SGT)
 
-- **Phase 1 trade:** SPY 31-Dec-2026 750/770 bull call spread, 60 spreads at about $8.33 net debit (≈ $49,980).
-  - If SPY ≥ 770 at expiry, the position is worth $120,000.
-  - Maximum loss is the debit paid.
-- **Execution:** ❌ **blocked.** Every Alpaca paper order (options and stock) is rejected with HTTP 403 "forbidden", even with the market open (17 Nov). The connector can read data but not trade. Waiting for the user to reconnect Alpaca with trading permission. See the [journal](journal/JOURNAL.md).
-- **Open positions:** none yet.
+- **Phase 1 position: OPEN ✅**
+  - Long 60 × SPY 31-Dec-2026 750/770 bull call spreads, **filled at $7.91** ($47,460).
+  - $2,540 of the sleeve is in cash.
+- **Payoff:** if SPY ≥ 770 on 31 Dec (+4.3% from 738.6 at entry), the sleeve is worth **$122,540**.
+  - Breakeven: SPY 757.91.
+  - Maximum loss: $47,460.
+- **Account:** Alpaca paper, opened 17 Nov after the connector was reconnected (earlier attempts were rejected with HTTP 403). See the [journal](journal/JOURNAL.md).
 
 ## Monitoring
 

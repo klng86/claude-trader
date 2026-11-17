@@ -94,3 +94,30 @@ Rules for this account:
 - No position yet. The strategy is unchanged.
 - The daily check-in will retry each day. If entry is delayed, re-size so that payout ≈ $120k and total cost ≤ $50k.
 - If entry slips past about 1 Dec, re-run the odds: with less time, the same strike needs a bigger move per day.
+
+## 2026-11-17 — ✅ Phase 1 position OPENED (10:48 pm SGT / 9:48 am US Eastern)
+
+- **Fix:** the user reconnected the Alpaca MCP connector. Orders are now accepted.
+- **Order:** BUY 60 × SPY 31-Dec-2026 750/770 bull call spread, limit $8.05. Client id `phase1-spy-750-770-cs-20261117-r2`, order id `fb6dfbea-dba9-4127-b783-de46cc1bb0f9`.
+- **Fill:** about 1 second after submission, at a **net debit of $7.91** (below the $8.05 limit):
+  - Long 60 × SPY261231C00750000 @ $12.53
+  - Short 60 × SPY261231C00770000 @ $4.62
+- **Cost:** 60 × $791 = **$47,460**. The rest of the $50k sleeve, **$2,540**, stays in cash.
+- **SPY at entry:** about 738.6.
+- **Payoff at 31 Dec expiry:**
+
+| SPY at expiry | Spread value | Sleeve total (incl. $2,540 cash) |
+|---|---|---|
+| ≤ 750 | $0 | $2,540 |
+| 757.91 (breakeven) | $47,460 | $50,000 |
+| 760 | $60,000 | $62,540 |
+| ≥ 770 | **$120,000** | **$122,540** ✅ goal |
+
+- **Payout ratio:** 2.53×, better than the 2.40× planned because the fill was cheaper.
+- **Odds:** the price implies about a 40% chance of SPY ≥ 770; the simulation estimate is about 33%.
+- **Risk rules now active** (STRATEGY.md):
+  - take profit if the spread is worth ≥ $19.50
+  - rescue-rotation review if the spread is worth < $3 with ≥ 8 trading days left
+  - close before the 31 Dec bell if SPY is between 750 and 770
+  - spare cash ($2,540) can go into further defined-risk trades if they add odds
+- **Paper account after the trade:** about $52.5k cash plus the spread. The $50k outside the sleeve is untouched.
