@@ -52,3 +52,7 @@ Rules for this account:
 - **Recorded in:** `CLAUDE.md` (standing instructions).
 - **Monitoring:** a weekday check-in at 1:13 pm US Eastern was planned, but creating the recurring schedule was **denied by a permission check**. It is pending the user's approval. The one-off order retry at 9:45 am US Eastern on 17 Nov is still scheduled.
 - **Update:** the user approved the daily check-in. It is now **active** every weekday at 1:13 pm US Eastern; the first run is 17 Nov 2026.
+- **Update:** the check-in moved to **10:45 pm SGT, Mon–Fri** (the user is based in Singapore).
+  - That is 9:45 am US Eastern now, 15 minutes after the US open. From 8 Mar 2027 (US daylight saving) it becomes 10:45 am US Eastern, still within US trading hours.
+  - The separate one-off retry was removed, because the daily check-in fires at the same moment and now handles the order entry.
+  - On 31 Dec the check-in runs at 9:45 am US Eastern, leaving about 6 hours before the close to apply the 750–770 exit rule.

@@ -14,12 +14,12 @@ A trading log and research repo for one goal: grow a **$50,000 USD** base portfo
 - **Phase 1 trade:** SPY 31-Dec-2026 750/770 bull call spread, 60 spreads at about $8.33 net debit (≈ $49,980).
   - If SPY ≥ 770 at expiry, the position is worth $120,000.
   - Maximum loss is the debit paid.
-- **Execution:** the first order attempts on 16 Nov, while the market was closed, were rejected with HTTP 403. A retry is scheduled for 17 Nov at 9:45 am US Eastern. See the [journal](journal/JOURNAL.md).
+- **Execution:** the first order attempts on 16 Nov, while the market was closed, were rejected with HTTP 403. The retry happens at the first daily check-in: 17 Nov, 10:45 pm SGT. See the [journal](journal/JOURNAL.md).
 - **Open positions:** none yet.
 
 ## Monitoring
 
-- **Phase 1 (until 31 Dec 2026):** an automated check-in every weekday at 1:13 pm US Eastern (**active since 17 Nov 2026**).
+- **Phase 1 (until 31 Dec 2026):** an automated check-in every weekday at **10:45 pm SGT**, which is 9:45 am US Eastern while US clocks are on standard time (**active since 17 Nov 2026**).
   - Reviews positions and prices, and re-runs the analysis.
   - Changes the strategy if needed, then journals and pushes.
   - Reviews positions and prices, and re-runs the analysis.
