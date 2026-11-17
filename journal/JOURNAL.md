@@ -51,3 +51,4 @@ Rules for this account:
 - **Hard limit, repeated by the user:** **no trading in the live IBKR account.**
 - **Recorded in:** `CLAUDE.md` (standing instructions).
 - **Monitoring:** a weekday check-in at 1:13 pm US Eastern was planned, but creating the recurring schedule was **denied by a permission check**. It is pending the user's approval. The one-off order retry at 9:45 am US Eastern on 17 Nov is still scheduled.
+- **Update:** the user approved the daily check-in. It is now **active** every weekday at 1:13 pm US Eastern; the first run is 17 Nov 2026.
