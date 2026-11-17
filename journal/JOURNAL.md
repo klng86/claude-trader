@@ -56,3 +56,17 @@ Rules for this account:
   - That is 9:45 am US Eastern now, 15 minutes after the US open. From 8 Mar 2027 (US daylight saving) it becomes 10:45 am US Eastern, still within US trading hours.
   - The separate one-off retry was removed, because the daily check-in fires at the same moment and now handles the order entry.
   - On 31 Dec the check-in runs at 9:45 am US Eastern, leaving about 6 hours before the close to apply the 750–770 exit rule.
+
+## 2026-11-17 — Clarification: several trades allowed
+
+- **User:** the strategy doesn't have to be a single trade; it can use several to reach the goal. If the current strategy is suitable, proceed as-is.
+- **Assessment:** the single 750/770 spread stays as the opening trade.
+  - With fair pricing, nothing beats the 41.7% ceiling, and splitting into smaller bets only adds costs and time decay.
+  - Several trades help in two cases: if the market moves sharply, and in Phase 2.
+- **Added to STRATEGY.md:** rules for using several trades during Phase 1:
+  - take profit at ≥ $19.50
+  - rotate into a new trade if the spread falls below $3 with at least 8 trading days left and a better option exists
+  - put any spare cash into further defined-risk trades
+  - no undefined risk
+  - carry any remaining value into Phase 2
+- **Decision:** proceed as-is. The order goes in at tonight's 10:45 pm SGT check-in.

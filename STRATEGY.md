@@ -38,6 +38,18 @@ The probability-maximising approach is "bold play": make a single bet sized so t
   - Close before the 31 Dec close if SPY is between 750 and 770, so the short leg isn't assigned against a long leg that is only partly in the money.
   - No averaging down and no rolling. If the trade loses, Phase 1 has failed and the plan resets with whatever is left.
 
+### Phase 1: using more than one trade (clarified by the user on 17 Nov 2026)
+The strategy can use several trades; it does not have to be one bet. We still **start with the single spread**:
+- With fair pricing, no sequence of trades can beat a 41.7% chance of reaching 2.4×.
+- Splitting into several smaller bets adds trading costs and time decay, so it lowers the odds rather than raising them.
+
+Each daily check-in can add, replace or rotate trades under these rules:
+1. **Take profit early:** if the position is worth ≥ $117k (spread ≥ $19.50), close it. The target is reached.
+2. **Rescue rotation:** suppose the spread is worth less than $3 (roughly SPY below 725) and at least 8 trading days remain. Then compare the odds of a fresh structure for the remaining value against the odds of holding. Rotate the whole remaining value only if the new structure has a meaningfully higher modelled chance of reaching $120k. One example would be a cheaper near-the-money spread after implied volatility has jumped.
+3. **Opportunistic add:** if the sleeve holds spare cash (from a partial exit or a cheaper fill), it can go into further defined-risk spreads, as long as the combined payoff still targets about $120k.
+4. **No undefined risk:** no naked short options and no margin beyond the $50k sleeve.
+5. **If the target is missed on 31 Dec,** whatever value remains becomes Phase 2 capital. Phase 2 uses many trades by design.
+
 ### Phase 2: 2027–2031, compounding (only if Phase 1 succeeds)
 
 The target needs 87% a year. No index product delivers that. The best available odds come from:
