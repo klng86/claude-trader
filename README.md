@@ -17,6 +17,14 @@ A trading log and research repo for one goal: grow a **$50,000 USD** base portfo
 - **Execution:** the first order attempts on 16 Nov, while the market was closed, were rejected with HTTP 403. A retry is scheduled for 17 Nov at 9:45 am US Eastern. See the [journal](journal/JOURNAL.md).
 - **Open positions:** none yet.
 
+## Monitoring
+
+- **Phase 1 (until 31 Dec 2026):** an automated check-in every weekday at 1:13 pm US Eastern.
+  - Reviews positions and prices, and re-runs the analysis.
+  - Changes the strategy if needed, then journals and pushes.
+- **Phase 2:** the check-in moves to weekly or monthly, set when Phase 1 ends.
+- The standing rules in [CLAUDE.md](CLAUDE.md) apply to every check-in. Above all: **no trading on IBKR.**
+
 ## Odds of hitting the targets
 
 From `sim/goal_odds.py`: 200,000 Monte Carlo paths, block-bootstrapped from SPY daily returns for Sep 2021 to Nov 2026. That period averaged about 15% a year, so these odds lean optimistic.

@@ -44,3 +44,10 @@ Rules for this account:
   - Read-only API calls work, and the account shows `trading_blocked: false`, options level 3.
   - The cause is either the market being closed or the connector's API key lacking trading permission.
   - Next step: retry after the 17 Nov open.
+
+## 2026-11-17 — Standing mandate
+
+- **The user granted ongoing authority:** Claude may run any analysis needed and adjust the strategy as conditions change.
+- **Hard limit, repeated by the user:** **no trading in the live IBKR account.**
+- **Recorded in:** `CLAUDE.md` (standing instructions).
+- **Monitoring:** a weekday check-in at 1:13 pm US Eastern, through Phase 1. It runs mid-session so there is time to act before the 31 Dec close.
