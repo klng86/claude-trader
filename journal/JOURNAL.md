@@ -121,3 +121,28 @@ Rules for this account:
   - close before the 31 Dec bell if SPY is between 750 and 770
   - spare cash ($2,540) can go into further defined-risk trades if they add odds
 - **Paper account after the trade:** about $52.5k cash plus the spread. The $50k outside the sleeve is untouched.
+
+## 2026-11-18 — Check-in #2 (10:45 pm SGT / 9:45 am US Eastern)
+
+**Snapshot**
+- SPY 730.6. It fell 1.0% on 17 Nov (close 732.41, intraday low 727.02) and is lower again today.
+- VIX 25.5 at the 17 Nov close (22.9 on the 16th). Implied volatility rose: 750C 16.9%, 770C 15.0%.
+- Spread value ≈ $6.45 (750C $10.10, 770C $3.65), down 18.5% from the $7.91 entry.
+- Sleeve value: 60 × $645 + $2,540 cash = **$41,240**, down 17.5%.
+- Days to expiry: 30 trading days.
+
+**Odds of SPY ≥ 770 on 31 Dec (needs +5.4%)**
+- Lognormal model: 15.5% / 18.5% / 22.3% at volatilities of 15% / 17% / 20%.
+- Bootstrap: 23.1%.
+- The most any position could offer at this sleeve value is 41.66k ÷ 120k ≈ **34.7%**.
+
+**Rotation analysis** (new script: `sim/rotation_check.py`)
+- Exiting at the natural price would bring in about $39.1k, or $41.66k including cash.
+- Best realistic re-deployment: 120 × **754/764** spreads at $3.47 natural. Odds would be 28.3% (bootstrap) or 23.6% (lognormal 18%), against 23.1% / 19.9% for holding: **+5.2 and +3.7 points.**
+- Spreads only $1–3 wide looked better on paper (up to 51%), but those come from stale quotes and need more than 1,000 contracts. Excluded.
+
+**Decision: HOLD.**
+- No rule triggered: the spread is worth $6.45, well above the $3 rescue level and below the $19.50 take-profit.
+- The rotation edge is under +5 points on the lognormal model and depends on noisy quotes. Moving after one day on a 1% dip would be churn.
+- Added a standing rotation test to STRATEGY.md: rotate only if the improvement is ≥ 5 points on BOTH models.
+- The VIX spike (25.5) makes new spreads more expensive, which is another reason not to rotate now.

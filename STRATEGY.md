@@ -45,10 +45,11 @@ The strategy can use several trades; it does not have to be one bet. We still **
 
 Each daily check-in can add, replace or rotate trades under these rules:
 1. **Take profit early:** if the position is worth ≥ $117k (spread ≥ $19.50), close it. The target is reached.
-2. **Rescue rotation:** suppose the spread is worth less than $3 (roughly SPY below 725) and at least 8 trading days remain. Then compare the odds of a fresh structure for the remaining value against the odds of holding. Rotate the whole remaining value only if the new structure has a meaningfully higher modelled chance of reaching $120k. One example would be a cheaper near-the-money spread after implied volatility has jumped.
-3. **Opportunistic add:** if the sleeve holds spare cash (from a partial exit or a cheaper fill), it can go into further defined-risk spreads, as long as the combined payoff still targets about $120k.
-4. **No undefined risk:** no naked short options and no margin beyond the $50k sleeve.
-5. **If the target is missed on 31 Dec,** whatever value remains becomes Phase 2 capital. Phase 2 uses many trades by design.
+2. **Rotation test (added 18 Nov):** every check-in runs `sim/rotation_check.py`. It rotates only if the best alternative improves the hit probability by **at least 5 percentage points on BOTH models** (bootstrap and lognormal), after exit costs, so it doesn't churn on quote noise.
+3. **Rescue rotation:** suppose the spread is worth less than $3 (roughly SPY below 725) and at least 8 trading days remain. Then compare the odds of a fresh structure for the remaining value against the odds of holding. Rotate the whole remaining value only if the new structure has a meaningfully higher modelled chance of reaching $120k. One example would be a cheaper near-the-money spread after implied volatility has jumped.
+4. **Opportunistic add:** if the sleeve holds spare cash (from a partial exit or a cheaper fill), it can go into further defined-risk spreads, as long as the combined payoff still targets about $120k.
+5. **No undefined risk:** no naked short options and no margin beyond the $50k sleeve.
+6. **If the target is missed on 31 Dec,** whatever value remains becomes Phase 2 capital. Phase 2 uses many trades by design.
 
 ### Phase 2: 2027–2031, compounding (only if Phase 1 succeeds)
 
