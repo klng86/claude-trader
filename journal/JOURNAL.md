@@ -146,3 +146,24 @@ Rules for this account:
 - The rotation edge is under +5 points on the lognormal model and depends on noisy quotes. Moving after one day on a 1% dip would be churn.
 - Added a standing rotation test to STRATEGY.md: rotate only if the improvement is ≥ 5 points on BOTH models.
 - The VIX spike (25.5) makes new spreads more expensive, which is another reason not to rotate now.
+
+## 2026-11-19 — Check-in #3 (10:45 pm SGT / 9:46 am US Eastern)
+
+**Snapshot**
+- SPY **737.3**, up 1.0% today. It closed 18 Nov at 730.33 after an intraday low of 726.90.
+- VIX closed 18 Nov at 24.56, down from 25.46.
+- **Data issue:** Alpaca option quotes have not updated since the 18 Nov close (timestamps 21:14 UTC), both in the chain and in the latest-quote endpoint, 16 minutes into today's session. Position marks are stale too.
+- Spread at the 18 Nov close: 750C bid 9.45 / ask 9.66, 770C bid 3.38 / ask 3.45, mid ≈ $6.14.
+  - Sleeve at the 18 Nov close ≈ 60 × $614 + $2,540 = **$39.4k**.
+- Estimated value today: the spread's delta is about 0.21, so SPY's +7 adds about $1.5, putting the spread near **$7.6** and the sleeve near **$48k**.
+- Implied volatility for the Dec-31 options fell to about 13–14% at the 18 Nov close, even with VIX in the mid-20s.
+
+**Odds of SPY ≥ 770 on 31 Dec** (needs +4.4%, 29 trading days)
+- Lognormal model: 17.2% / 21.3% / 23.9% at volatilities of 13.5% / 16% / 18%.
+- Bootstrap: 28.7%.
+
+**Rotation test:** not run, because the quotes are stale and a comparison on old prices would be meaningless. In any case, today's rally moves SPY toward the current strikes, which weakens the case for rotating.
+
+**Decision: HOLD.** No rule triggered: the spread is about $6–7.6, between the $3 rescue level and the $19.50 take-profit. No orders placed.
+
+**Follow-up:** if option quotes are still stale at the next check-in, treat it as a data-feed problem and tell the user.
