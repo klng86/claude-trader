@@ -224,3 +224,29 @@ Rules for this account:
 - rotate only if the improvement is ≥ 5 points on both models
 - otherwise hold
 - no exit to cash
+
+## 2026-11-20 — Main check (11:15 pm SGT / 10:15 am US Eastern) — rescue and rotation review
+
+**Snapshot (live quotes, 15:15 UTC)**
+- SPY **714.0**. Opened 713.56; day range 711.75–718.26; 19 Nov close 715.84.
+- 750C bid 5.49 / ask 5.66; 770C bid 1.84 / ask 1.94.
+- Spread mid ≈ **$3.69**; exit value at the natural price **$3.55**.
+- Sleeve ≈ **$23.8k** at the natural price, or $24.7k at mid.
+- Dec-31 implied volatility: about 18% at 750 and 16.5% at 770, with steep skew.
+- 28 trading days to expiry.
+- The $3 rescue level was **not** breached: the spread is $3.55–3.69. The standard rotation test was run anyway, per Today's plan.
+
+**Rotation test** (`sim/rotation_check.py`, now reads a quote snapshot: `data/quotes/2026-11-20_1515Z.json`)
+- Uses $5 strikes only, fills at the natural price, widths 5–30, sized so a win reaches ≥ $120k.
+- **Hold 750/770:** bootstrap 9.8%, lognormal-18% 10.4%, lognormal-21% 14.0%.
+- **Best alternative, 755/765 × 117 at $1.78:** bootstrap 12.5%, lognormal-18% 12.5%, lognormal-21% 16.2%. That's **+2.7 / +2.1 points**, below the +5 threshold.
+- Lower strikes (720–745) fail: their payoff ratios are too low to turn $23.8k into $120k without buying more than the sleeve can afford.
+- The ceiling for a fairly priced bet is 19.9%. The gap to ~10–14% comes from bid-ask costs and the skew.
+
+**Decision: HOLD 60 × 750/770.**
+- No rule triggered. Rotating would pay round-trip costs for about 2 points of model edge.
+- The current structure keeps the full upside if SPY recovers above 770.
+
+**Watch**
+- Rescue review again if the spread is < $3 (roughly SPY < 710).
+- Next: 23 Nov check-ins (Mon); GDP and PCE on 25 Nov; Thanksgiving break 26–27 Nov.
