@@ -167,3 +167,12 @@ Rules for this account:
 **Decision: HOLD.** No rule triggered: the spread is about $6–7.6, between the $3 rescue level and the $19.50 take-profit. No orders placed.
 
 **Follow-up:** if option quotes are still stale at the next check-in, treat it as a data-feed problem and tell the user.
+
+## 2026-11-20 — Check-in schedule changed
+
+- **The user asked** whether to check in before the market opens and left the decision to Claude.
+- **Decision:** split into two check-ins.
+  - **9:40 pm SGT / 8:40 am US Eastern, pre-market prep (read-only).** Captures the 8:30 am US data releases, overnight news and SPY's pre-market price, and writes "Today's plan" with explicit price triggers.
+  - **11:15 pm SGT / 10:15 am US Eastern, main check (moved from 10:45 pm).** Lets the opening swings and wide spreads settle. On 19 Nov, option quotes were still stale at 9:46 am US Eastern. It carries out the plan using live option prices.
+- **Why not trade pre-market:** SPY options only trade 9:30 am–4:00 pm US Eastern, so the pre-market check is for planning only.
+- **31 Dec:** the main check at 10:15 am US Eastern leaves about 5¾ hours to apply the 750–770 exit rule.

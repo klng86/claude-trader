@@ -24,11 +24,13 @@ A trading log and research repo for one goal: grow a **$50,000 USD** base portfo
 
 ## Monitoring
 
-- **Phase 1 (until 31 Dec 2026):** an automated check-in every weekday at **10:45 pm SGT**, which is 9:45 am US Eastern while US clocks are on standard time (**active since 17 Nov 2026**).
-  - Reviews positions and prices, and re-runs the analysis.
-  - Changes the strategy if needed, then journals and pushes.
-  - Reviews positions and prices, and re-runs the analysis.
-  - Changes the strategy if needed, then journals and pushes.
+- **Phase 1 (until 31 Dec 2026):** two weekday check-ins (times while US clocks are on standard time):
+  - **9:40 pm SGT (8:40 am US Eastern), pre-market prep:**
+    - Read-only. Covers the 8:30 am US economic data, the news and SPY's pre-market price.
+    - Writes "Today's plan" with price triggers.
+  - **11:15 pm SGT (10:15 am US Eastern), main check:**
+    - Uses live option prices after the opening swings settle.
+    - Carries out the plan and the risk rules, then journals and pushes.
 - **Phase 2:** the check-in moves to weekly or monthly, set when Phase 1 ends.
 - The standing rules in [CLAUDE.md](CLAUDE.md) apply to every check-in. Above all: **no trading on IBKR.**
 

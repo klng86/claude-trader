@@ -12,6 +12,13 @@
 - **Record keeping:** every analysis, decision, order, fill and strategy change goes in `journal/JOURNAL.md`, newest entry at the bottom. Any change to the plan or risk rules also updates `STRATEGY.md`. The Status section of `README.md` stays current.
 - **Git:** commit and push after each update, to branch `claude/happy-hopper-8qjp0n`.
 
+## Schedule
+- **9:40 pm SGT, pre-market prep (read-only):**
+  - Covers news, economic data and SPY's pre-market price.
+  - Writes a "Today's plan" entry in the journal.
+- **11:15 pm SGT, main check:** the only check-in that may trade, on the Alpaca paper account only.
+- Times assume US standard time. When US daylight saving starts on 8 Mar 2027, the pre-market check would land at the open, so review the schedule before then.
+
 ## Routine on each check-in
 1. Read the market clock, the account, positions and open orders on Alpaca paper.
 2. Update the market snapshot: SPY, VIX, the spread's value, days to expiry.
