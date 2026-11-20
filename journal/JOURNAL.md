@@ -176,3 +176,45 @@ Rules for this account:
   - **11:15 pm SGT / 10:15 am US Eastern, main check (moved from 10:45 pm).** Lets the opening swings and wide spreads settle. On 19 Nov, option quotes were still stale at 9:46 am US Eastern. It carries out the plan using live option prices.
 - **Why not trade pre-market:** SPY options only trade 9:30 am–4:00 pm US Eastern, so the pre-market check is for planning only.
 - **31 Dec:** the main check at 10:15 am US Eastern leaves about 5¾ hours to apply the 750–770 exit rule.
+
+## 2026-11-20 — Pre-market prep (9:40 pm SGT / 8:40 am US Eastern) — ⚠️ SHARP SELL-OFF
+
+**What happened on 19 Nov**
+- SPY opened 737.5, hit **739.77**, then reversed to close at **715.84**: −2.0% on the day, a 3.2% drop from the high.
+- VIX jumped to **28.44** (intraday high 29.13).
+- Main headline in the news feed (unverified, from the newswire): **Nvidia CEO Jensen Huang resigned**, followed by Bernstein and Oppenheimer downgrades. Nvidia is a top SPY holding, and the AI/mega-cap complex sold off with it.
+
+**Pre-market (8:40 am US Eastern)**
+- SPY about **708.2**, a further −1.1% gap down. The overnight session traded 711–716.
+- Spread quotes (pre-market, wide, treat as indicative): 750C bid 4.80 / ask 4.99, 770C bid 1.48 / ask 1.66.
+  - Spread mid ≈ **$3.32**.
+  - Sleeve ≈ 60 × $332 + $2,540 = **$22.5k (−55%)**.
+- Days to expiry: **28 trading days**.
+
+**Odds of SPY ≥ 770 by 31 Dec** (needs +8.7%)
+- Lognormal model: 5.8% / 9.3% / 12.7% at volatilities of 16% / 19% / 22%.
+- Bootstrap: 7.1%.
+- **Ceiling for any position at this sleeve value: 22.5k ÷ 120k ≈ 18.7%.**
+- The gap between holding (~7–9%) and the ceiling is now wide. Restructuring could add meaningful odds, but only if live quotes confirm it.
+
+**Calendar ahead** (high importance)
+- 25 Nov: GDP and PCE
+- 26 Nov: Thanksgiving, market closed
+- 27 Nov: half-day
+- 4 Dec: jobs report
+- 10 Dec: CPI
+- 15 Dec: PPI
+- 16 Dec: retail sales
+- 23 Dec: GDP and PCE
+- 31 Dec: expiry
+- Plus the mid-December FOMC meeting and Nvidia at the UBS conference on 1 Dec.
+
+### Today's plan (for the 11:15 pm SGT check)
+1. **Confirm fresh quotes** (timestamps from today, after 9:30 am US Eastern). If stale, no trade.
+2. **Rescue review, expected to trigger:** if the spread mid is < **$3.00** (roughly SPY ≲ 711), run `sim/rotation_check.py` with live quotes over strikes **700–760**, widths 5–20.
+   - Rotate the whole remaining value only if the best structure beats holding by **≥ 5 points on BOTH models**, after exit costs.
+   - Prefer liquid strikes (multiples of 5) and fewer than about 150 contracts.
+3. **If the spread is ≥ $3,** run the standard rotation test anyway, because the hold-versus-ceiling gap is large.
+4. **No panic exit to cash.** Selling to cash locks in the loss without raising the odds of reaching the goal. Under the mandate, remaining value either stays in the best goal-reaching structure or rolls into Phase 2 after 31 Dec.
+5. **Take-profit (spread ≥ $19.50):** not in play. **Dec-31 750–770 exit window:** not yet relevant.
+6. Key SPY levels: 715.84 (19 Nov close), 726.9 (18 Nov low), 750 (lower strike), 757.91 (original breakeven), 770 (goal).
