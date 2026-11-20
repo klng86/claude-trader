@@ -218,3 +218,9 @@ Rules for this account:
 4. **No panic exit to cash.** Selling to cash locks in the loss without raising the odds of reaching the goal. Under the mandate, remaining value either stays in the best goal-reaching structure or rolls into Phase 2 after 31 Dec.
 5. **Take-profit (spread ≥ $19.50):** not in play. **Dec-31 750–770 exit window:** not yet relevant.
 6. Key SPY levels: 715.84 (19 Nov close), 726.9 (18 Nov low), 750 (lower strike), 757.91 (original breakeven), 770 (goal).
+
+**User decision (20 Nov, before the main check):** the target stays at **$120k**, and Claude decides on the expert merits. There is no switch to protecting the remaining capital. The 11:15 pm SGT check follows Today's plan:
+- run the rescue and rotation review with live quotes
+- rotate only if the improvement is ≥ 5 points on both models
+- otherwise hold
+- no exit to cash
