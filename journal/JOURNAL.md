@@ -290,3 +290,26 @@ Rules for this account:
 4. **Upside:** SPY above 720 would put the spread back toward about $4.5. No action, just hold.
 5. **Take-profit (spread ≥ $19.50)** and the **Dec-31 750–770 exit window:** not in play.
 6. **No exit to cash** (user decision on 20 Nov: the target stays at $120k).
+
+## 2026-11-23 — Main check (11:15 pm SGT / 10:15 am US Eastern)
+
+**Snapshot (live quotes, 15:15 UTC)**
+- SPY **722.6**, up **4.6%** from Friday's 690.68 close. Opened 724.30 (well above the 707 pre-market level); day range 713.57–724.76.
+- This is a relief rally on the push to reinstate Huang at Nvidia.
+- 750C bid 7.56 / ask 7.74; 770C bid 2.66 / ask 2.70.
+- Spread mid ≈ **$4.97**; exit value at the natural price **$4.86**.
+- Sleeve ≈ **$31.7k at natural**, $32.4k at mid, **−36%**. That's up from about $21k at pre-market.
+- 27 trading days to expiry.
+- The $3 rescue level is not in play.
+
+**Rotation test** (`data/quotes/2026-11-23_1515Z.json`)
+- Fair ceiling: 26.4%.
+- **Hold 750/770:** bootstrap 14.6%, lognormal-18% 14.0%, lognormal-21% 17.8%.
+- **Best alternative, 760/765 × 237 at $1.27:** bootstrap 18.3%, lognormal-18% 16.7%. That's **+3.7 / +2.7 points**, below the 5-point bar. It also needs 237 contracts in a $5-wide spread, where execution slippage would eat most of the edge.
+
+**Decision: HOLD.** No rule triggered.
+
+**Watch**
+- Whether the gap holds into the close.
+- 25 Nov GDP and PCE.
+- Rescue review if the spread is < $3 (roughly SPY < 706).
