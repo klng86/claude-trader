@@ -250,3 +250,43 @@ Rules for this account:
 **Watch**
 - Rescue review again if the spread is < $3 (roughly SPY < 710).
 - Next: 23 Nov check-ins (Mon); GDP and PCE on 25 Nov; Thanksgiving break 26–27 Nov.
+
+## 2026-11-23 — Pre-market prep (9:40 pm SGT / 8:40 am US Eastern)
+
+**Friday 20 Nov recap:** a second leg down.
+- SPY opened 713.56, hit 718.26, then fell to a low of **686.75** and closed at **690.68**: **−3.5% on the day**, −6.5% from the 19 Nov high.
+- **VIX closed at 35.89** (intraday high 40.03).
+- At the close the spread was worth about $2.35 (750C 3.54, 770C 1.19), **below the $3 rescue level**. No check-in was running at the close, so no action was taken.
+
+**Weekend and overnight news** (newswire headlines, unverified):
+- The Trump administration is publicly pushing for **Jensen Huang to be reinstated** as Nvidia CEO, and Huang has agreed to Senate testimony.
+- Nvidia halted H200 sales in China (export compliance).
+
+**Pre-market (8:40 am US Eastern)**
+- SPY **707.2**, **+2.4%** from Friday's close: a relief gap on the Huang reinstatement push.
+- Spread quotes (pre-market, wide): 750C bid 4.34 / ask 4.53, 770C bid 1.23 / ask 1.49.
+  - Spread mid ≈ **$3.08**; natural exit ≈ $2.85.
+  - Sleeve ≈ **$21.0k at mid** ($19.6k at natural), **−58%**.
+- The spread's delta is about 0.11, so each SPY point is worth about $0.11 per spread, or $660 for the position.
+- 27 trading days to expiry.
+
+**Odds of SPY ≥ 770 by 31 Dec** (needs +8.9%)
+- Lognormal model: 7.4% / 11.9% / 15.9% at volatilities of 18% / 22% / 26%.
+- Bootstrap: 6.3%.
+- With VIX at 36, implied volatility is high. That raises the market-priced odds but also makes rotating into new spreads expensive.
+
+**Calendar this week**
+- 25 Nov: GDP and PCE
+- 26 Nov: Thanksgiving, market closed
+- 27 Nov: half-day, closes 1:00 pm US Eastern (2:00 am SGT Sat). That's before the 11:15 pm SGT check, so 27 Nov is still a normal check-in day.
+
+### Today's plan (for the 11:15 pm SGT check)
+1. **Confirm fresh quotes** (timestamps after 9:30 am US Eastern today).
+2. **Rescue level:** the spread hits $3 at about **SPY 706**.
+   - If the spread mid is **< $3**: run the full rescue review, `sim/rotation_check.py` on a new quote snapshot over strikes **700–770**.
+   - If the spread mid is ≥ $3: run the standard rotation test.
+   - Either way, rotate only if ≥ 5 points better on BOTH models.
+3. **Gap-fade risk:** if the relief gap fades and SPY trades **below 695**, note it in the journal. The rescue test then runs on those prices, and **lower strikes (725–750)** will dominate the candidate list.
+4. **Upside:** SPY above 720 would put the spread back toward about $4.5. No action, just hold.
+5. **Take-profit (spread ≥ $19.50)** and the **Dec-31 750–770 exit window:** not in play.
+6. **No exit to cash** (user decision on 20 Nov: the target stays at $120k).
