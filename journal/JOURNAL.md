@@ -313,3 +313,25 @@ Rules for this account:
 - Whether the gap holds into the close.
 - 25 Nov GDP and PCE.
 - Rescue review if the spread is < $3 (roughly SPY < 706).
+
+## 2026-11-24 — Pre-market prep (9:40 pm SGT / 8:40 am US Eastern)
+
+**23 Nov recap:** SPY closed **722.56** (high 727.98), +4.6% on the day. VIX closed **26.62**, down from 35.89. The intraday VIX low print of 15.39 looks like a bad tick.
+
+**Pre-market**
+- SPY about **713.4**, **−1.3%**: part of the relief rally is giving back. No new headlines in the SPY/QQQ/NVDA news feed since yesterday's close.
+- Spread quotes (pre-market, wide): 750C bid 4.93 / ask 5.58, 770C bid 1.34 / ask 1.68.
+  - Spread mid ≈ **$3.75**; sleeve ≈ **$25.0k**.
+- 26 trading days to expiry.
+- Odds of SPY ≥ 770 (needs +7.9%): lognormal 9.3% / 12.9% / 16.1% at volatilities of 18% / 21% / 24%.
+
+**Calendar**
+- **Tomorrow, 25 Nov: GDP and PCE** (8:30 am US Eastern). The 25 Nov pre-market check will capture them.
+- 26 Nov: Thanksgiving, market closed.
+- 27 Nov: half-day.
+
+### Today's plan (for the 11:15 pm SGT check)
+1. Confirm quotes are fresh, then save a quote snapshot and run `sim/rotation_check.py`.
+2. **Rescue level:** the spread hits $3 at about **SPY 706**. Below that, run the full rescue review over strikes 700–770.
+3. Rotate only if the improvement is ≥ 5 points on BOTH models; otherwise hold.
+4. Take-profit and the Dec-31 exit window are not in play. No exit to cash.
