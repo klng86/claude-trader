@@ -335,3 +335,21 @@ Rules for this account:
 2. **Rescue level:** the spread hits $3 at about **SPY 706**. Below that, run the full rescue review over strikes 700–770.
 3. Rotate only if the improvement is ≥ 5 points on BOTH models; otherwise hold.
 4. Take-profit and the Dec-31 exit window are not in play. No exit to cash.
+
+## 2026-11-24 — Main check (11:15 pm SGT / 10:15 am US Eastern)
+
+**Snapshot (live quotes, 15:15 UTC)**
+- SPY **718.9**; opened 715.30, range 712.17–720.89, previous close 722.56.
+- 750C bid 5.89 / ask 6.01; 770C bid 1.68 / ask 1.72.
+- Spread mid ≈ **$4.25**; exit at the natural price **$4.17**.
+- Sleeve ≈ **$27.6k** at the natural price, **−45%**.
+- 26 trading days to expiry.
+
+**Rotation test** (`data/quotes/2026-11-24_1515Z.json`)
+- Fair ceiling: 23.0%.
+- **Hold:** bootstrap 11.5%, lognormal-18% 11.7%, lognormal-21% 15.4%.
+- **Best alternative, 755/765 × 119 at $2.18:** bootstrap 14.6%, lognormal-18% 14.1%. That's **+3.1 / +2.4 points**, below the 5-point bar.
+
+**Decision: HOLD.** No rule triggered.
+
+**Next:** GDP and PCE at 8:30 am US Eastern on 25 Nov (pre-market check). Thanksgiving closure on 26 Nov.
