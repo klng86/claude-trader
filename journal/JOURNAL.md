@@ -353,3 +353,28 @@ Rules for this account:
 **Decision: HOLD.** No rule triggered.
 
 **Next:** GDP and PCE at 8:30 am US Eastern on 25 Nov (pre-market check). Thanksgiving closure on 26 Nov.
+
+## 2026-11-25 — Pre-market prep (9:40 pm SGT / 8:40 am US Eastern) — ⚠️ RESCUE LEVEL BREACHED
+
+**24 Nov recap:** SPY closed **718.91** (range 712.17–720.89). VIX 26.36.
+
+**Pre-market**
+- SPY about **704.0**, **−2.1%**, gapping down into the 8:30 am GDP and PCE releases.
+- The news feed has no clear macro headline yet. AI-credit worries are in the tape: a reported HPE financing warning hit Nebius, and analysts cut targets on CrowdStrike. The cause is unconfirmed. **The main check must confirm the GDP and PCE numbers.**
+- Spread quotes (pre-market, wide): 750C bid 3.06 / ask 3.28, 770C bid 0.77 / ask 0.97.
+  - Spread mid ≈ **$2.30**, **below the $3 rescue level**.
+  - Sleeve ≈ 60 × $230 + $2,540 ≈ **$16.3k (−67%)**.
+- 25 trading days to expiry, well above the rescue rule's 8-day minimum.
+- Odds of SPY ≥ 770 (needs +9.4%): lognormal ≈ 5–11% at 18–24% volatility.
+- The ceiling at this sleeve value is about 16.3k ÷ 120k ≈ 13.6%.
+
+### Today's plan (for the 11:15 pm SGT check)
+1. Confirm quotes are fresh (after 9:30 am US Eastern) and save a snapshot.
+2. **Rescue review (rule 3):** if the spread mid is still < $3, run `sim/rotation_check.py` over strikes **700–770**.
+   - About $16k must reach $120k, so the trade needs roughly a 7.4× payoff.
+   - Expect the candidates to be narrow 5–10-wide spreads around 745–770.
+   - Rotate the whole value only if the gain is ≥ 5 points on BOTH models after exit costs, at liquid strikes, with < ~250 contracts.
+   - Otherwise HOLD. The current spread is already a cheap, high-payoff bet: about 26× from here if SPY ends at 770 or higher.
+3. If SPY recovers to ≥ 706 and the spread is ≥ $3, run the standard rotation test.
+4. No exit to cash (user decision). Take-profit and the Dec-31 exit window are not in play.
+5. **Tomorrow, 26 Nov: Thanksgiving, market closed.** The check-ins will log the holiday only. 27 Nov is a half-day closing at 1:00 pm US Eastern, but the 11:15 pm SGT check (10:15 am US Eastern) is still inside the session.
