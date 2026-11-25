@@ -378,3 +378,31 @@ Rules for this account:
 3. If SPY recovers to ≥ 706 and the spread is ≥ $3, run the standard rotation test.
 4. No exit to cash (user decision). Take-profit and the Dec-31 exit window are not in play.
 5. **Tomorrow, 26 Nov: Thanksgiving, market closed.** The check-ins will log the holiday only. 27 Nov is a half-day closing at 1:00 pm US Eastern, but the 11:15 pm SGT check (10:15 am US Eastern) is still inside the session.
+
+## 2026-11-25 — Main check (11:15 pm SGT / 10:16 am US Eastern) — rescue review
+
+**Snapshot (live quotes, 15:16 UTC)**
+- SPY **700.9**; opened 703.16, low **695.54**, −2.5% from the 718.91 close.
+- 750C bid 3.06 / ask 3.11; 770C bid 0.77 / ask 0.80.
+- Spread mid ≈ **$2.30**; exit at the natural price **$2.26**.
+- Sleeve ≈ **$16.1k (−68%)**.
+- 25 trading days to expiry.
+- **Rescue rule triggered:** the spread is under $3 with 25 days left.
+
+**Rescue review** (`data/quotes/2026-11-25_1516Z.json`, strikes 700–770)
+- Fair ceiling: 13.4%.
+- **Hold:** bootstrap 3.6%, lognormal-18% 4.9%, lognormal-21% 7.8%.
+- **Best alternative, 750/765 × 80 at $1.99** (or the 755/765 / 760/765 variants): bootstrap 4.8%, lognormal-18% 6.1%. That's **+1.2 / +1.2 points**, far below the 5-point bar.
+- Lower strikes (700–745) can't reach the about 7.4× payoff needed from $16k without more capital, so they drop out.
+- With $16k left, any route to $120k needs SPY near or above 765–770 by 31 Dec. Moving strikes doesn't change that.
+
+**Decision: HOLD 60 × 750/770.**
+- No structure beats holding by a meaningful margin, and rotating pays bid-ask costs on both legs.
+- The position is a ~26× bet on SPY ≥ 770 (60 × $2,000 = $120k from a ~$13.6k spread value).
+- Per the 20 Nov user decision, there's no exit to cash.
+
+**Honest status:** Phase 1 now needs a +9.9% SPY rally in 25 sessions, about a 4–8% chance. If it misses, whatever remains of the $16.1k (plus the untouched rest of the account) carries into Phase 2.
+
+**Next:**
+- 26 Nov: Thanksgiving, closed. The check-ins will log the holiday only.
+- 27 Nov: half-day, closes 1:00 pm US Eastern / 2:00 am SGT.
