@@ -408,3 +408,4 @@ Rules for this account:
 - 27 Nov: half-day, closes 1:00 pm US Eastern / 2:00 am SGT.
 
 ## 2026-11-26 — Pre-market prep: US market closed (Thanksgiving). No action. Next session 27 Nov (half-day, closes 1:00 pm US Eastern / 2:00 am SGT).
+## 2026-11-26 — Main check: market closed (Thanksgiving). Position unchanged (60 × 750/770). No action.
